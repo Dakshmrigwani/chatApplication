@@ -2,6 +2,7 @@ import React from "react";
 import { InputGroup } from "react-bootstrap";
 import "../App.css";
 import picture from "./picture2.jpg";
+
 export default function Navbar() {
   return (
     <>

@@ -104,13 +104,6 @@ export default function Chat() {
             <div className="d-grid justify-content-start">
               <div className="py-2">
                 <img
-                  src={picture1}
-                  className="thumbnail rounded-circle "
-                  alt=""
-                  style={{ height: "3rem", width: "3rem" }}
-                />
-
-                <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
                   alt=""
                   className="size "

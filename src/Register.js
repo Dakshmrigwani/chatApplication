@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import InputGroup from "react-bootstrap/InputGroup";
-import { UserAuth } from "./AuthContext";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -19,7 +18,7 @@ export default function Register() {
     name: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
   let name, value;
   const handleChange = (event) => {
@@ -40,14 +39,14 @@ export default function Register() {
         {
           method: "POST",
           headers: {
-            "Content-Type": "application.json"
+            "Content-Type": "application.json",
           },
           body: JSON.stringify({
             name,
             email,
             password,
-            confirmPassword
-          })
+            confirmPassword,
+          }),
         }
       );
       if (res) {
@@ -55,7 +54,7 @@ export default function Register() {
           name,
           email,
           password,
-          confirmPassword
+          confirmPassword,
         });
         alert("successful");
         Navigate("/Home");
@@ -66,8 +65,6 @@ export default function Register() {
       alert("please fill the given details");
     }
   };
-
-  const { googleSignIn } = UserAuth();
 
   const handleGoogleSignIn = async () => {
     try {
