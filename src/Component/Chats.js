@@ -8,7 +8,7 @@ import picture5 from "./picture5.jpg";
 export default function Chats() {
   return (
     <>
-      <div className="py-3">
+      <div className="container-fluid py-3">
         <div className="">
           <InputGroup>
             <Form.Control type="text" placeholder="Search Users" />
@@ -19,7 +19,7 @@ export default function Chats() {
       <div className="">
         <div className="d-grid">
           <div className="row">
-            <div className="col-2">
+            <div className="col-sm-2">
               <img
                 src={picture1}
                 className="thumbnail rounded-circle"
@@ -27,19 +27,19 @@ export default function Chats() {
                 style={{ height: "3rem", width: "3rem" }}
               />
             </div>
-            <div className="col-7">
+            <div className="col-sm-7">
               <div className="row">
                 <h5>Lisa</h5>
                 <p>Hello John</p>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-sm-3">
               <p>12:00am</p>
             </div>
           </div>
 
           <div className="row">
-            <div className="col-2">
+            <div className="col-sm-2">
               <img
                 src={picture3}
                 className="thumbnail rounded-circle"
@@ -47,18 +47,18 @@ export default function Chats() {
                 style={{ height: "3rem", width: "3rem" }}
               />
             </div>
-            <div className="col-7">
+            <div className="col-sm-7">
               <div className="row">
                 <h5>Kat</h5>
                 <p>Hello John</p>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-sm-3">
               <p>12:00am</p>
             </div>
           </div>
           <div className="row">
-            <div className="col-2">
+            <div className="col-sm-2">
               <img
                 src={picture4}
                 className="thumbnail rounded-circle"
@@ -66,18 +66,18 @@ export default function Chats() {
                 style={{ height: "3rem", width: "3rem" }}
               />
             </div>
-            <div className="col-7">
+            <div className="col-sm-7">
               <div className="row">
                 <h5>Smith</h5>
                 <p>Hello John</p>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-sm-3">
               <p>12:00am</p>
             </div>
           </div>
           <div className="row">
-            <div className="col-2">
+            <div className="col-sm-2">
               <img
                 src={picture5}
                 className="thumbnail rounded-circle"
@@ -85,13 +85,13 @@ export default function Chats() {
                 style={{ height: "3rem", width: "3rem" }}
               />
             </div>
-            <div className="col-7">
+            <div className="col-sm-7">
               <div className="row">
                 <h5>Alex</h5>
                 <p>Hello John</p>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-sm-3">
               <p>12:00am</p>
             </div>
           </div>
