@@ -55,7 +55,7 @@ export default function Chat() {
                 show={show}
                 onHide={handleClose}
                 size="lg"
-                className="d-flex mt-4"
+                dialogClassName="custom-modal"
               >
                 <Modal.Header closeButton />
                 <Modal.Body className="d-grid justify-content-start">
