@@ -10,8 +10,11 @@ import picture1 from "./Picture1.jpg";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import { useSelector } from "react-redux";
+import { selectMessage } from "./Message/messageSlice";
+import { selectClicked } from "./Message/buttonSlice";
 
-export default function Chat({ message }) {
+export default function Chat() {
   const bottomRef = useRef(null);
   function handleClick() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -21,6 +24,9 @@ export default function Chat({ message }) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const message = useSelector(selectMessage);
+  const clicked = useSelector(selectClicked);
 
   return (
     <>
@@ -167,15 +173,17 @@ export default function Chat({ message }) {
                   </Card.Text>
                 </Card.Body>
               </Card>
-              <Card className="mt-2">
-                <Card.Body>
-                  <Card.Text>hello {message}</Card.Text>
-                </Card.Body>
-              </Card>
+              {clicked && (
+                <Card className="mt-2">
+                  <Card.Body>
+                    <Card.Text>{message}</Card.Text>
+                  </Card.Body>
+                </Card>
+              )}
             </div>
-
             <div ref={bottomRef}></div>
           </div>
+
           <Messages handleClick={handleClick} className="input" />
         </InputGroup>
       </div>

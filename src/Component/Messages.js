@@ -6,11 +6,15 @@ import { BsImageFill, BsFillMicFill } from "react-icons/bs";
 import { SlPaperClip } from "react-icons/sl";
 import { CiPaperplane } from "react-icons/ci";
 import { Modal, Button } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { setMessage } from "./Message/messageSlice";
+import { setClicked } from "./Message/buttonSlice";
 
 export default function Messages({ handleClick }) {
   const [uploadedFileName, setUploadedFileName] = useState();
   const [showModal, setShowModal] = useState(false);
-  const [message, setMessage] = useState("");
+  const [message, setMessageState] = useState("");
+  const dispatch = useDispatch();
 
   const inputRef = useRef();
   const inputRef1 = useRef();
@@ -25,16 +29,14 @@ export default function Messages({ handleClick }) {
   const handleUpload1 = () => {
     inputRef1.current?.click();
   };
-
-  const handleChange = (e) => {
-    setMessage(e.target.value);
+  const handleInputChange = (event) => {
+    setMessageState(event.target.value);
   };
-  const sendMessage = () => {
-    // Send the message using the message state variable
-    console.log(message);
 
-    // Clear the message input
-    setMessage("");
+  const handleSendClick = () => {
+    dispatch(setClicked(true));
+    dispatch(setMessage(message));
+    setMessageState("");
   };
 
   return (
@@ -50,7 +52,7 @@ export default function Messages({ handleClick }) {
             aria-describedby="basic-addon2"
             onClick={handleClick}
             value={message}
-            onChange={handleChange}
+            onChange={handleInputChange}
           />
 
           <Button variant="outline-secondary" onClick={handleUpload}>
@@ -80,7 +82,7 @@ export default function Messages({ handleClick }) {
 
             {<BsImageFill />}
           </Button>
-          <Button variant="outline-success" onClick={sendMessage}>
+          <Button variant="outline-success" onClick={handleSendClick}>
             <CiPaperplane />
           </Button>
         </InputGroup>
