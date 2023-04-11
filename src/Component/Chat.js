@@ -40,6 +40,7 @@ export default function Chat() {
                 height: "4rem",
                 border: "none",
                 backgroundColor: "#fd7e14",
+
                 boxShadow: "none",
               }}
               className="ms-1"

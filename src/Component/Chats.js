@@ -9,7 +9,6 @@ import picture5 from "./picture5.jpg";
 const images = [picture1, picture3, picture4, picture5];
 
 export default function Chats() {
-  
   return (
     <>
       <div className="container-fluid py-3">
