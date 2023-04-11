@@ -76,13 +76,7 @@ export default function Messages({ handleClick }) {
             </Modal.Footer>
           </Modal>
           <Button variant="outline-primary" onClick={handleUpload1}>
-            <input
-              ref={inputRef1}
-              onMouseEnter={() => setShowModal(true)}
-              onMouseLeave={() => setShowModal(false)}
-              className="d-none"
-              type="file"
-            />
+            <input ref={inputRef1} className="d-none" type="file" />
 
             {<BsImageFill />}
           </Button>

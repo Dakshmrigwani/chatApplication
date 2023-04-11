@@ -7,12 +7,11 @@ import "../App.css";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import picture1 from "./Picture1.jpg";
-import picture2 from "./picture2.jpg";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 
-export default function Chat() {
+export default function Chat({ message }) {
   const bottomRef = useRef(null);
   function handleClick() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -139,7 +138,7 @@ export default function Chat() {
             <div className="d-grid justify-content-end ms-5">
               <div className="py-2 ">
                 <img
-                  className="size"
+                  className="size ms-5"
                   alt=""
                   src="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg"
                 />
@@ -147,29 +146,32 @@ export default function Chat() {
 
               <div className="">
                 <img
-                  className="size"
+                  className="size ms-5"
                   alt=""
                   src="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg"
                 />
               </div>
-              <div className="">
-                <Card className="mt-2 ">
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card className="mt-2">
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
+              <Card className="mt-2 ">
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card className="mt-2">
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card className="mt-2">
+                <Card.Body>
+                  <Card.Text>hello {message}</Card.Text>
+                </Card.Body>
+              </Card>
             </div>
 
             <div ref={bottomRef}></div>
