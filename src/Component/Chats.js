@@ -19,7 +19,7 @@ export default function Chats() {
       </div>
       <div className="d-grid">
         <div className="row">
-          <div className="col-lg-2">
+          <div className="col-lg-2 mt-1">
             <img
               src={images[0]}
               className="thumbnail rounded-circle"
@@ -29,8 +29,17 @@ export default function Chats() {
           </div>
           <div className="col-lg-7">
             <div className="row">
-              <h5>Lisa</h5>
-              <p>Hello John</p>
+              <Button
+                variant="outline-light"
+                size="sm"
+                style={{ width: "8rem", height: "4rem", border: "none" }}
+                className="ms-1"
+              >
+                <div className="text-start text-dark">
+                  <h5>Lisa</h5>
+                  <p>Hello John</p>
+                </div>
+              </Button>
             </div>
           </div>
           <div className="col-lg-3">
@@ -39,7 +48,7 @@ export default function Chats() {
         </div>
 
         <div className="row">
-          <div className="col-lg-2">
+          <div className="col-lg-2  mt-1">
             <img
               src={images[1]}
               className="thumbnail rounded-circle"
@@ -49,8 +58,17 @@ export default function Chats() {
           </div>
           <div className="col-lg-7">
             <div className="row">
-              <h5>Kat</h5>
-              <p>Hello John</p>
+              <Button
+                variant="outline-light"
+                size="sm"
+                className="ms-1"
+                style={{ width: "8rem", height: "4rem", border: "none" }}
+              >
+                <div className="text-start text-dark">
+                  <h5>Kat</h5>
+                  <p>Hello John</p>
+                </div>
+              </Button>
             </div>
           </div>
           <div className="col-lg-3">
@@ -58,7 +76,7 @@ export default function Chats() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-2">
+          <div className="col-lg-2  mt-1">
             <img
               src={images[2]}
               className="thumbnail rounded-circle"
@@ -68,8 +86,17 @@ export default function Chats() {
           </div>
           <div className="col-lg-7">
             <div className="row">
-              <h5>Smith</h5>
-              <p>Hello John</p>
+              <Button
+                variant="outline-light"
+                size="sm"
+                className="ms-1"
+                style={{ width: "8rem", height: "4rem", border: "none" }}
+              >
+                <div className="text-start text-dark">
+                  <h5>Smith</h5>
+                  <p>Hello John</p>
+                </div>
+              </Button>
             </div>
           </div>
           <div className="col-lg-3">
@@ -77,7 +104,7 @@ export default function Chats() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-2">
+          <div className="col-lg-2  mt-1">
             <img
               src={images[3]}
               className="thumbnail rounded-circle"
@@ -87,8 +114,17 @@ export default function Chats() {
           </div>
           <div className="col-lg-7">
             <div className="row">
-              <h5>Alex</h5>
-              <p>Hello John</p>
+              <Button
+                variant="outline-light"
+                size="sm"
+                style={{ width: "8rem", height: "4rem", border: "none" }}
+                className="ms-1"
+              >
+                <div className="text-start text-dark">
+                  <h5>Alex</h5>
+                  <p>Hello John</p>
+                </div>
+              </Button>
             </div>
           </div>
           <div className="col-lg-3">

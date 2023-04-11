@@ -42,7 +42,7 @@ export default function Chat() {
                   style={{ height: "3rem", width: "3rem" }}
                 />
               </div>
-              <div className="fs-4 fw-bolder ps-1">Kat</div>
+              <div className="fs-4 fw-bolder ps-1">Lisa</div>
             </div>
           </div>
           <div className="col">
