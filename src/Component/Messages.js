@@ -5,14 +5,13 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { BsImageFill, BsFillMicFill } from "react-icons/bs";
 import { SlPaperClip } from "react-icons/sl";
 import { CiPaperplane } from "react-icons/ci";
-import { Modal, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { setMessage } from "./Message/messageSlice";
 import { setClicked } from "./Message/buttonSlice";
 
 export default function Messages({ handleClick }) {
   const [uploadedFileName, setUploadedFileName] = useState();
-  const [showModal, setShowModal] = useState(false);
   const [message, setMessageState] = useState("");
   const dispatch = useDispatch();
 
@@ -65,18 +64,7 @@ export default function Messages({ handleClick }) {
 
             {uploadedFileName ? uploadedFileName : <SlPaperClip />}
           </Button>
-          <Modal show={showModal} onHide={() => setShowModal(false)}>
-            <Modal.Header closeButton />
 
-            <Modal.Body>
-              <p>You have selected a photo from the file.</p>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={() => setShowModal(false)}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
           <Button variant="outline-primary" onClick={handleUpload1}>
             <input ref={inputRef1} className="d-none" type="file" />
 

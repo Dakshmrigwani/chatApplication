@@ -11,8 +11,8 @@ import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { useSelector } from "react-redux";
-import { selectMessage } from "./Message/messageSlice";
 import { selectClicked } from "./Message/buttonSlice";
+import { selectMessage } from "./Message/messageSlice";
 
 export default function Chat() {
   const bottomRef = useRef(null);
