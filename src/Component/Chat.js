@@ -33,17 +33,29 @@ export default function Chat() {
       <div className="container-fluid" style={{ backgroundColor: "#fd7e14" }}>
         <div className="row">
           <div className="col">
-            <div className="d-flex justify-content-start">
-              <div>
-                <img
-                  src={picture1}
-                  className="thumbnail rounded-circle "
-                  alt=""
-                  style={{ height: "3rem", width: "3rem" }}
-                />
+            <Button
+              size="sm"
+              style={{
+                width: "8rem",
+                height: "4rem",
+                border: "none",
+                backgroundColor: "#fd7e14",
+                boxShadow: "none",
+              }}
+              className="ms-1"
+            >
+              <div className="d-flex justify-content-start">
+                <div>
+                  <img
+                    src={picture1}
+                    className="thumbnail rounded-circle "
+                    alt=""
+                    style={{ height: "3rem", width: "3rem" }}
+                  />
+                </div>
+                <div className="fs-4 fw-bolder ps-1 text-dark">Lisa</div>
               </div>
-              <div className="fs-4 fw-bolder ps-1">Lisa</div>
-            </div>
+            </Button>
           </div>
           <div className="col">
             <div className="d-flex justify-content-end mt-2">

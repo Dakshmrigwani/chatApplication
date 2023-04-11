@@ -9,6 +9,7 @@ import picture5 from "./picture5.jpg";
 const images = [picture1, picture3, picture4, picture5];
 
 export default function Chats() {
+  
   return (
     <>
       <div className="container-fluid py-3">
@@ -32,7 +33,12 @@ export default function Chats() {
               <Button
                 variant="outline-light"
                 size="sm"
-                style={{ width: "8rem", height: "4rem", border: "none" }}
+                style={{
+                  width: "8rem",
+                  height: "4rem",
+                  border: "none",
+                  boxShadow: "none",
+                }}
                 className="ms-1"
               >
                 <div className="text-start text-dark">
@@ -62,7 +68,12 @@ export default function Chats() {
                 variant="outline-light"
                 size="sm"
                 className="ms-1"
-                style={{ width: "8rem", height: "4rem", border: "none" }}
+                style={{
+                  width: "8rem",
+                  height: "4rem",
+                  border: "none",
+                  boxShadow: "none",
+                }}
               >
                 <div className="text-start text-dark">
                   <h5>Kat</h5>
@@ -90,7 +101,12 @@ export default function Chats() {
                 variant="outline-light"
                 size="sm"
                 className="ms-1"
-                style={{ width: "8rem", height: "4rem", border: "none" }}
+                style={{
+                  width: "8rem",
+                  height: "4rem",
+                  border: "none",
+                  boxShadow: "none",
+                }}
               >
                 <div className="text-start text-dark">
                   <h5>Smith</h5>
@@ -117,7 +133,12 @@ export default function Chats() {
               <Button
                 variant="outline-light"
                 size="sm"
-                style={{ width: "8rem", height: "4rem", border: "none" }}
+                style={{
+                  width: "8rem",
+                  height: "4rem",
+                  border: "none",
+                  boxShadow: "none",
+                }}
                 className="ms-1"
               >
                 <div className="text-start text-dark">
