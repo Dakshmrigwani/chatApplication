@@ -10,6 +10,7 @@ import { Modal, Button } from "react-bootstrap";
 export default function Messages({ handleClick }) {
   const [uploadedFileName, setUploadedFileName] = useState();
   const [showModal, setShowModal] = useState(false);
+  const [message, setMessage] = useState("");
 
   const inputRef = useRef();
   const inputRef1 = useRef();
@@ -25,6 +26,17 @@ export default function Messages({ handleClick }) {
     inputRef1.current?.click();
   };
 
+  const handleChange = (e) => {
+    setMessage(e.target.value);
+  };
+  const sendMessage = () => {
+    // Send the message using the message state variable
+    console.log(message);
+
+    // Clear the message input
+    setMessage("");
+  };
+
   return (
     <>
       <div className="px-2 input w-100">
@@ -32,12 +44,13 @@ export default function Messages({ handleClick }) {
           <Button variant="outline-primary">
             <BsFillMicFill />
           </Button>
-
           <Form.Control
             placeholder="Enter a Message"
             aria-label="Enter a Message"
             aria-describedby="basic-addon2"
             onClick={handleClick}
+            value={message}
+            onChange={handleChange}
           />
 
           <Button variant="outline-secondary" onClick={handleUpload}>
@@ -73,7 +86,7 @@ export default function Messages({ handleClick }) {
 
             {<BsImageFill />}
           </Button>
-          <Button variant="outline-success">
+          <Button variant="outline-success" onClick={sendMessage}>
             <CiPaperplane />
           </Button>
         </InputGroup>
