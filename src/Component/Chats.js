@@ -1,13 +1,20 @@
 import React, { useState } from "react";
-import { InputGroup, Form, Button } from "react-bootstrap";
+import { InputGroup, Form, Button, Modal } from "react-bootstrap";
 import picture1 from "./Picture1.jpg";
 import picture3 from "./picture3.jpg";
 import picture4 from "./picture4.jpg";
 import picture5 from "./picture5.jpg";
 
-const images = [picture1, picture3, picture4, picture5];
-
 export default function Chats() {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+    setShowModal(true);
+  };
+
+  const images = [picture1, picture3, picture4, picture5];
   return (
     <>
       <div className="container-fluid py-3">
@@ -24,6 +31,7 @@ export default function Chats() {
               className="thumbnail rounded-circle"
               alt=""
               style={{ height: "3rem", width: "3rem", cursor: "pointer" }}
+              onClick={() => handleImageClick(images[0])}
             />
           </div>
           <div className="col-lg-7">
@@ -32,7 +40,7 @@ export default function Chats() {
                 variant="outline-light"
                 size="sm"
                 style={{
-                  width: "8rem",
+                  width: "13rem",
                   height: "4rem",
                   border: "none",
                   boxShadow: "none",
@@ -58,6 +66,7 @@ export default function Chats() {
               className="thumbnail rounded-circle"
               alt=""
               style={{ height: "3rem", width: "3rem", cursor: "pointer" }}
+              onClick={() => handleImageClick(images[1])}
             />
           </div>
           <div className="col-lg-7">
@@ -67,7 +76,7 @@ export default function Chats() {
                 size="sm"
                 className="ms-1"
                 style={{
-                  width: "8rem",
+                  width: "13rem",
                   height: "4rem",
                   border: "none",
                   boxShadow: "none",
@@ -91,6 +100,7 @@ export default function Chats() {
               className="thumbnail rounded-circle"
               alt=""
               style={{ height: "3rem", width: "3rem", cursor: "pointer" }}
+              onClick={() => handleImageClick(images[2])}
             />
           </div>
           <div className="col-lg-7">
@@ -100,7 +110,7 @@ export default function Chats() {
                 size="sm"
                 className="ms-1"
                 style={{
-                  width: "8rem",
+                  width: "13rem",
                   height: "4rem",
                   border: "none",
                   boxShadow: "none",
@@ -124,6 +134,7 @@ export default function Chats() {
               className="thumbnail rounded-circle"
               alt=""
               style={{ height: "3rem", width: "3rem", cursor: "pointer" }}
+              onClick={() => handleImageClick(images[3])}
             />
           </div>
           <div className="col-lg-7">
@@ -132,7 +143,7 @@ export default function Chats() {
                 variant="outline-light"
                 size="sm"
                 style={{
-                  width: "8rem",
+                  width: "13rem",
                   height: "4rem",
                   border: "none",
                   boxShadow: "none",
@@ -150,6 +161,16 @@ export default function Chats() {
             <p>12:00am</p>
           </div>
         </div>
+        <Modal show={showModal} size="xl" onHide={() => setShowModal(false)}>
+          {selectedImage && (
+            <img
+              src={selectedImage}
+              alt=""
+              className="w-100"
+              style={{ height: "36rem", padding: "0 !important" }}
+            />
+          )}
+        </Modal>
       </div>
     </>
   );
