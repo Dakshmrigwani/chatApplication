@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Lightbox from "react-image-lightbox";
 import { InputGroup, Form, Button } from "react-bootstrap";
 import picture1 from "./Picture1.jpg";
 import picture3 from "./picture3.jpg";
