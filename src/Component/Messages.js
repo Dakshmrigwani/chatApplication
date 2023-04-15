@@ -33,9 +33,13 @@ export default function Messages({ handleClick }) {
   };
 
   const handleSendClick = () => {
-    dispatch(setClicked(true));
-    dispatch(setMessage(message));
-    setMessageState("");
+    if (message === "") {
+      return alert("please enter the message");
+    } else {
+      dispatch(setClicked(true));
+      dispatch(setMessage(message));
+      setMessageState("");
+    }
   };
 
   return (
