@@ -7,10 +7,12 @@ import "../App.css";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import picture1 from "./Picture1.jpg";
-import picture2 from "./picture2.jpg";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import { useSelector } from "react-redux";
+import { selectClicked } from "./Message/buttonSlice";
+import { selectMessage } from "./Message/messageSlice";
 
 export default function Chat() {
   const bottomRef = useRef(null);
@@ -23,22 +25,38 @@ export default function Chat() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const message = useSelector(selectMessage);
+  const clicked = useSelector(selectClicked);
+
   return (
     <>
       <div className="container-fluid" style={{ backgroundColor: "#fd7e14" }}>
         <div className="row">
           <div className="col">
-            <div className="d-flex justify-content-start">
-              <div>
-                <img
-                  src={picture1}
-                  className="thumbnail rounded-circle "
-                  alt=""
-                  style={{ height: "3rem", width: "3rem" }}
-                />
+            <Button
+              size="sm"
+              style={{
+                width: "8rem",
+                height: "4rem",
+                border: "none",
+                backgroundColor: "#fd7e14",
+
+                boxShadow: "none",
+              }}
+              className="ms-1"
+            >
+              <div className="d-flex justify-content-start">
+                <div>
+                  <img
+                    src={picture1}
+                    className="thumbnail rounded-circle "
+                    alt=""
+                    style={{ height: "3rem", width: "3rem" }}
+                  />
+                </div>
+                <div className="fs-4 fw-bolder ps-1 text-dark">Lisa</div>
               </div>
-              <div className="fs-4 fw-bolder ps-1">Kat</div>
-            </div>
+            </Button>
           </div>
           <div className="col">
             <div className="d-flex justify-content-end mt-2">
@@ -55,7 +73,7 @@ export default function Chat() {
                 show={show}
                 onHide={handleClose}
                 size="lg"
-                className="d-flex mt-4"
+                dialogClassName="custom-modal"
               >
                 <Modal.Header closeButton />
                 <Modal.Body className="d-grid justify-content-start">
@@ -104,13 +122,6 @@ export default function Chat() {
             <div className="d-grid justify-content-start">
               <div className="py-2">
                 <img
-                  src={picture1}
-                  className="thumbnail rounded-circle "
-                  alt=""
-                  style={{ height: "3rem", width: "3rem" }}
-                />
-
-                <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
                   alt=""
                   className="size "
@@ -146,7 +157,7 @@ export default function Chat() {
             <div className="d-grid justify-content-end ms-5">
               <div className="py-2 ">
                 <img
-                  className="size"
+                  className="size ms-5"
                   alt=""
                   src="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg"
                 />
@@ -154,33 +165,38 @@ export default function Chat() {
 
               <div className="">
                 <img
-                  className="size"
+                  className="size ms-5"
                   alt=""
                   src="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg"
                 />
               </div>
-              <div className="">
-                <Card className="mt-2 ">
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+              <Card className="mt-2 ">
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card className="mt-2">
+                <Card.Body>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              {clicked && (
                 <Card className="mt-2">
                   <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
+                    <Card.Text>{message}</Card.Text>
                   </Card.Body>
                 </Card>
-              </div>
+              )}
             </div>
-
             <div ref={bottomRef}></div>
           </div>
+
           <Messages handleClick={handleClick} className="input" />
         </InputGroup>
       </div>

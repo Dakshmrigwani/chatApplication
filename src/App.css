@@ -13,6 +13,12 @@
   color: white !important;
   background-color: #3b5998;
 }
+.custom-modal {
+  margin-left: auto;
+  margin-right: 1rem;
+  width: 10rem;
+  padding-top: 1rem;
+}
 .input {
   bottom: 0;
   position: absolute;
