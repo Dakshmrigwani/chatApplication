@@ -31,6 +31,12 @@ export default function Home() {
               aria-labelledby="offcanvasExampleLabel"
             >
               <div class="offcanvas-body">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
                 <Navbar />
                 <Chats />
               </div>
