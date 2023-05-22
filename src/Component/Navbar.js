@@ -7,12 +7,12 @@ export default function Navbar() {
   return (
     <>
       <div className="row d-flex" style={{ backgroundColor: "#0dcaf0" }}>
-        <div className="col-sm-6">
+        <div className="col-6">
           <div className="d-flex justify-content-start">
             <div className="fw-bolder fs-4">CHATTER</div>
           </div>
         </div>
-        <div className="col-sm-6">
+        <div className="col-6">
           <div className="d-flex justify-content-end">
             <div className="">
               <InputGroup>
