@@ -30,7 +30,7 @@ export default function Chat() {
 
   return (
     <>
-      <div className="container-fluid" style={{ backgroundColor: "#fd7e14" }}>
+      <div style={{ backgroundColor: "#fd7e14" }}>
         <div className="row">
           <div className="col">
             <Button
@@ -76,7 +76,7 @@ export default function Chat() {
                 dialogClassName="custom-modal"
               >
                 <Modal.Header closeButton />
-                <Modal.Body className="d-grid justify-content-start">
+                <Modal.Body className="d-flex flex-column justify-content-start">
                   <Row className="pb-3">
                     <Button variant="bg-none">
                       <div className="text-start">Report</div>
