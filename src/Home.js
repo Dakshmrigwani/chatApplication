@@ -37,7 +37,7 @@ export default function Home() {
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>
-                <Navbar />
+
                 <Chats />
               </div>
             </div>
