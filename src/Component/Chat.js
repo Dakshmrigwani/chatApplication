@@ -195,9 +195,8 @@ export default function Chat() {
               )}
             </div>
             <div ref={bottomRef}></div>
+            <Messages handleClick={handleClick} className="input" />
           </div>
-
-          <Messages handleClick={handleClick} className="input" />
         </InputGroup>
       </div>
     </>

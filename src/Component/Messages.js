@@ -44,7 +44,7 @@ export default function Messages({ handleClick }) {
 
   return (
     <>
-      <div className="px-2 input w-100">
+      <div className="input w-100">
         <InputGroup className="pb-3">
           <Button variant="outline-primary">
             <BsFillMicFill />
