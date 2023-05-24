@@ -23,18 +23,18 @@ export default function Chats() {
           <Button variant="success">Search</Button>
         </InputGroup>
       </div>
-      <div className="d-grid">
+      <div className="d-flex flex-column">
         <div className="row">
-          <div className="col-lg-2 mt-1">
+          <div className="col-3 mt-1">
             <img
               src={images[0]}
-              className="thumbnail rounded-circle"
+              className="thumbnail rounded-circle "
               alt=""
               style={{ height: "3rem", width: "3rem", cursor: "pointer" }}
               onClick={() => handleImageClick(images[0])}
             />
           </div>
-          <div className="col-lg-7">
+          <div className="col-6">
             <div className="row">
               <Button
                 variant="outline-light"
@@ -54,13 +54,13 @@ export default function Chats() {
               </Button>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-3">
             <p>12:00am</p>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-lg-2  mt-1">
+          <div className="col-3  mt-1">
             <img
               src={images[1]}
               className="thumbnail rounded-circle"
@@ -69,7 +69,7 @@ export default function Chats() {
               onClick={() => handleImageClick(images[1])}
             />
           </div>
-          <div className="col-lg-7">
+          <div className="col-6">
             <div className="row">
               <Button
                 variant="outline-light"
@@ -89,12 +89,12 @@ export default function Chats() {
               </Button>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-3">
             <p>12:00am</p>
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-2  mt-1">
+          <div className="col-3  mt-1">
             <img
               src={images[2]}
               className="thumbnail rounded-circle"
@@ -103,7 +103,7 @@ export default function Chats() {
               onClick={() => handleImageClick(images[2])}
             />
           </div>
-          <div className="col-lg-7">
+          <div className="col-6">
             <div className="row">
               <Button
                 variant="outline-light"
@@ -123,12 +123,12 @@ export default function Chats() {
               </Button>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-3">
             <p>12:00am</p>
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-2  mt-1">
+          <div className="col-3  mt-1">
             <img
               src={images[3]}
               className="thumbnail rounded-circle"
@@ -137,7 +137,7 @@ export default function Chats() {
               onClick={() => handleImageClick(images[3])}
             />
           </div>
-          <div className="col-lg-7">
+          <div className="col-6">
             <div className="row">
               <Button
                 variant="outline-light"
@@ -157,7 +157,7 @@ export default function Chats() {
               </Button>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-3">
             <p>12:00am</p>
           </div>
         </div>

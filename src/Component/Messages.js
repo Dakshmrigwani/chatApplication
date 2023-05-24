@@ -44,7 +44,7 @@ export default function Messages({ handleClick }) {
 
   return (
     <>
-      <div className="px-2 input w-100">
+      <div className="input w-100">
         <InputGroup className="pb-3">
           <Button variant="outline-primary">
             <BsFillMicFill />
@@ -52,10 +52,11 @@ export default function Messages({ handleClick }) {
           <Form.Control
             placeholder="Enter a Message"
             aria-label="Enter a Message"
-            aria-describedby="basic-addon2"
+            as="textarea"
             onClick={handleClick}
             value={message}
             onChange={handleInputChange}
+            style={{ height: "30px" }}
           />
 
           <Button variant="outline-secondary" onClick={handleUpload}>

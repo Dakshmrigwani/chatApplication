@@ -32,12 +32,10 @@ export default function Chat() {
     <>
       <div style={{ backgroundColor: "#fd7e14" }}>
         <div className="row">
-          <div className="col">
+          <div className="col-3">
             <Button
               size="sm"
               style={{
-                width: "8rem",
-                height: "4rem",
                 border: "none",
                 backgroundColor: "#fd7e14",
 
@@ -58,7 +56,7 @@ export default function Chat() {
               </div>
             </Button>
           </div>
-          <div className="col">
+          <div className="col-9">
             <div className="d-flex justify-content-end mt-2">
               <Button variant="outline-none">
                 <BsCameraVideo />
@@ -195,9 +193,8 @@ export default function Chat() {
               )}
             </div>
             <div ref={bottomRef}></div>
+            <Messages handleClick={handleClick} className="input" />
           </div>
-
-          <Messages handleClick={handleClick} className="input" />
         </InputGroup>
       </div>
     </>
