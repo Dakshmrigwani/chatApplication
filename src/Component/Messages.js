@@ -52,10 +52,11 @@ export default function Messages({ handleClick }) {
           <Form.Control
             placeholder="Enter a Message"
             aria-label="Enter a Message"
-            aria-describedby="basic-addon2"
+            as="textarea"
             onClick={handleClick}
             value={message}
             onChange={handleInputChange}
+            style={{ height: "30px" }}
           />
 
           <Button variant="outline-secondary" onClick={handleUpload}>
